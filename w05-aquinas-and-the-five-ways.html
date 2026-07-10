@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Philosophy Honors &mdash; Lesson 5b</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">PHILOSOPHY HONORS</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 2</div>
+        <div style="font-size: 12px; color: #666;">God</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 5b</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Aquinas and the Five Ways</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">God</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 5b</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Aquinas and the Five Ways</div>
+        <div style="font-size: 16px; color: #666;">Lesson</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Five different roads. One claimed destination.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Thomas Aquinas died in 1274 at forty-nine, having produced more systematic philosophical theology than most scholars produce in twice the years. The section you are reading, Question 2, Article 3 of the <em>Summa Theologica</em>, contains his five arguments for God's existence, known as the <strong>Five Ways</strong> (<em>quinque viae</em>). They are among the most analyzed and contested arguments in Western philosophy, and this lesson walks through each of them carefully.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> reconstruct each of the Five Ways from its starting point to its conclusion.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain Aquinas's scholastic method: objections, <em>sed contra</em>, corpus, replies.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> state precisely what the Five Ways do and do not establish about God's nature.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Aquinas, <em>Summa Theologica</em> I, q.2, a.3 (Freddoso translation), assigned excerpt: &ldquo;Aquinas, Article 3&rdquo;</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; HOW TO READ THE SUMMA</div>
+
+        <div class="optima-widget ow-reflect">
+          <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
+          <div class="widget-question">When you write an argumentative essay, do you usually address the strongest objection to your view, or mostly just build your own case? (No wrong answer.)</div>
+          <div class="widget-options">
+            <button data-response="You're already doing what Aquinas does in every article of the Summa. Watch how deliberately he does it.">&#9989; I try to address the best objection</button>
+            <button data-response="Aquinas's method below is a model worth stealing: he states the objections before he even gives his own argument.">&#128221; Mostly just my own case</button>
+            <button data-response="This lesson gives you a very concrete structure to try next time.">&#129300; Depends on the assignment</button>
+          </div>
+          <div class="widget-feedback"></div>
+          <button class="widget-reset">Reset</button>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Each Article in the <em>Summa</em> takes the form of a debate. It begins with the <strong>Objections</strong>, the strongest arguments against the position Aquinas will defend. Then the <strong>Sed contra</strong>, a brief statement of the opposing view. Then the <strong>Corpus</strong>, where Aquinas gives his own argument. Finally, <strong>Replies to Objections</strong>, addressing each objection stated at the beginning. When you read Article 3, notice that Aquinas opens by presenting arguments that God does not exist, including the argument from evil and the argument from natural explanation. He takes these seriously and answers them at the end. This structure is one of the things that makes Aquinas worth reading as a philosopher, not merely as a theologian.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE FIVE WAYS</div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;"><strong>The First Way (Motion).</strong> Things change: cold iron becomes hot, a seed becomes a tree. Whatever is moved is moved by another; nothing can bring itself from potentiality to actuality, since it would already need the actuality it is trying to acquire. This chain of movers cannot regress infinitely, or there would be no first mover and therefore no motion at all. But motion exists. Therefore there is a first mover, moved by no other: "this everyone understands to be God."</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;"><strong>The Second Way (Causation).</strong> Nothing is the efficient cause of itself. A chain of causes cannot regress infinitely, or there would be no first cause, and consequently no ultimate or intermediate effects either. Therefore there is a first efficient cause, caused by nothing prior. Aquinas is not claiming the universe had a beginning in time here; that is a separate question. He is arguing that even an eternal universe needs a causal first, or the whole chain of causation is unintelligible.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;"><strong>The Third Way (Contingency).</strong> Things in the world are contingent: they can exist or not exist. If everything were contingent, it is possible for everything to not exist simultaneously, and if there were ever genuinely nothing, nothing could come from it. But there is something now. Therefore not everything is contingent; something exists necessarily, and if that necessity is not borrowed from another, it must belong to a being that is necessary in itself.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;"><strong>The Fourth Way (Degrees of Perfection).</strong> We compare things as more or less good, true, or real, which implies a maximum by which all others are measured. Aquinas borrows the principle that the maximum in any genus causes all others in that genus. The maximum in being is therefore the cause of being and goodness in everything else. This is the Way most contested by modern philosophers, since that borrowed principle is not self-evident outside Aristotelian metaphysics.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;"><strong>The Fifth Way (Governance).</strong> Natural bodies without intelligence, like acorns or planets, act consistently toward ends. Non-intelligent things cannot direct themselves toward an end, any more than an arrow can aim itself. Therefore there must be an intelligent being by whom all natural things are directed to their end. This Way connects most directly to the Design Argument you will read in Lesson 5c.</p>
+
+        <div class="optima-widget ow-select">
+          <div class="widget-kicker">&#9889; TRY IT &middot; MATCH THE WAY TO ITS STARTING POINT</div>
+          <div class="widget-question">Each Way begins from a different observable feature of the world. Match the starting point to the correct Way.</div>
+
+          <div class="widget-row" data-correct="2" data-fb="Right. The Fourth Way starts from the fact that we compare things as more or less good, true, or real, and infers a maximum." data-hint="Ask which Way is about comparing degrees of goodness, truth, and reality.">
+            <div class="widget-row-prompt">1. We routinely compare things as more or less good, true, or real</div>
+            <div class="widget-options">
+              <button data-choice="0">First Way (Motion)</button>
+              <button data-choice="1">Third Way (Contingency)</button>
+              <button data-choice="2">Fourth Way (Degrees of Perfection)</button>
+              <button data-choice="3">Fifth Way (Governance)</button>
+            </div>
+          </div>
+
+          <div class="widget-row" data-correct="3" data-fb="Right. The Fifth Way starts from non-intelligent things, like acorns, consistently acting toward ends." data-hint="Ask which Way is about things without minds still acting toward consistent goals.">
+            <div class="widget-row-prompt">2. Acorns reliably become oaks, not pines, without any intelligence directing them</div>
+            <div class="widget-options">
+              <button data-choice="0">Second Way (Causation)</button>
+              <button data-choice="1">Fourth Way (Degrees of Perfection)</button>
+              <button data-choice="2">First Way (Motion)</button>
+              <button data-choice="3">Fifth Way (Governance)</button>
+            </div>
+          </div>
+
+          <div class="widget-row" data-correct="1" data-fb="Right. The Third Way starts from the fact that things can exist or fail to exist, i.e. that they are contingent." data-hint="Ask which Way is specifically about things that could exist or could fail to exist.">
+            <div class="widget-row-prompt">3. Organisms are born and die; stars form and collapse; things that exist now might not have existed at all</div>
+            <div class="widget-options">
+              <button data-choice="0">First Way (Motion)</button>
+              <button data-choice="1">Third Way (Contingency)</button>
+              <button data-choice="2">Second Way (Causation)</button>
+              <button data-choice="3">Fourth Way (Degrees of Perfection)</button>
+            </div>
+          </div>
+
+          <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; AQUINAS'S METHOD, AND WHAT THE WAYS LEAVE OPEN</div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Aquinas argues not that any one Way is conclusive alone, but that together they converge on the same conclusion from different starting points: motion, causation, contingency, gradation, and purpose all point to a first, uncaused, necessary being. Each argument identifies a feature of the world that seems to require an explanation the world itself cannot supply.</p>
+
+        <div style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #1B6A94; margin-bottom: 8px;">&#128161; A PHILOSOPHICALLY THIN CONCLUSION</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">The Five Ways do not establish that God is personal, loves human beings, responds to prayer, or has communicated with any particular people in history. Those are claims of revealed theology. What the Five Ways establish, if they succeed, is that something exists that is unmoved, uncaused, necessary, maximally perfect, and supremely intelligent. Whether that something is the God of Abraham is a further question the arguments alone do not settle.</div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">These are the arguments you will work with in your capstone essay. Lesson 5c turns from Aquinas to another thinker who believed, eight centuries later, that the natural world testified to God, in an argument Aquinas would not have recognized as his own.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Continue to Lesson 5c</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">William Paley and the watchmaker analogy.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; HOLD ONTO THIS</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Aquinas states his opponents' strongest case before he ever states his own. That habit is worth stealing for your capstone essay, whichever Way you choose to challenge or defend.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; PHILOSOPHY HONORS &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 5b &middot; Aquinas and the Five Ways</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
