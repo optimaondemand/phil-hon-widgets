@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Philosophy Honors &mdash; Lesson 13c</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">PHILOSOPHY HONORS</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 4</div>
+        <div style="font-size: 12px; color: #666;">The Good Life</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 13c</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Objections and Replies</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">The Good Life</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 13c</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Objections and Replies</div>
+        <div style="font-size: 16px; color: #666;">Lesson</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">In 1729, a satirist proposed, in the calm tone of an economic policy paper, that the poor sell their children as food. He did not mean it. That is exactly the point.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Any moral theory powerful enough to matter will face serious objections. Mill knew this, and in Chapter II of <em>Utilitarianism</em> he takes on the strongest attacks against his own view. This lesson works through four major objections and Mill's replies, then turns to a satirical text written more than a century before Mill, that dramatizes exactly what happens when aggregate calculation is allowed to operate without any independent limit.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> state the four major objections to utilitarianism covered in this lesson and evaluate Mill's replies to each.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain how Jonathan Swift's <em>A Modest Proposal</em> satirizes purely aggregative moral reasoning, and why it is satire rather than a sincere argument.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain what utilitarianism establishes despite these objections, and why the problem of persons points toward Kant's alternative.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">John Stuart Mill, <em>Utilitarianism</em>, Chapter II (conclusion); Jonathan Swift, <em>A Modest Proposal</em> (excerpt)</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; FOUR OBJECTIONS</div>
+
+        <div class="optima-widget ow-reflect">
+          <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
+          <div class="widget-question">Of the objections you've encountered so far to utilitarianism, which worries you most: that it demands too much calculation, that it can justify injustice, or that it flattens special relationships into the same calculus as strangers? (No wrong answer.)</div>
+          <div class="widget-options">
+            <button data-response="Watch how Mill tries to answer this with rule utilitarianism, and decide for yourself whether the answer fully lands.">&#129504; The calculation problem</button>
+            <button data-response="This is the objection this lesson pushes hardest on, including through Swift's satire. Keep your worry in view.">&#9878;&#65039; The justice problem</button>
+            <button data-response="This objection is the one Mill answers least directly. See what you think his theory can and cannot say about it.">&#10084;&#65039; The special relationships problem</button>
+          </div>
+          <div class="widget-feedback"></div>
+          <button class="widget-reset">Reset</button>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;"><strong>Objection One: a doctrine worthy only of swine.</strong> If the good is pleasure, morality seems to sink to the level of animal gratification. Mill's reply is the higher/lower pleasures distinction: human pleasures, engaging higher faculties, are categorically superior, not merely different. The unresolved question: why should pleasure be the criterion at all, even qualitatively enriched pleasure? Kant will argue that some things matter independent of whether they produce pleasure at all.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;"><strong>Objection Two: it is too demanding to calculate.</strong> Mill's reply is that accumulated human experience has already encoded utilitarian wisdom into our ordinary moral rules, honesty, promise-keeping, avoiding harm, so we do not need to recalculate from scratch. This is the move toward rule utilitarianism, and critics note the tension: if utility ultimately matters, why follow a rule when breaking it seems to produce more good?</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;"><strong>Objection Three: it is compatible with injustice.</strong> The sheriff case is the classic example: sacrificing one innocent person for the sake of five looks, by the numbers, like the right call, but intuition strongly resists it. Mill argues that security from arbitrary punishment is such an enormous component of happiness that violating it almost always produces more disutility than it prevents, and in Chapter V he treats justice as a specially weighted category of utility. What he cannot fully explain, on strictly utilitarian grounds, is why individual rights should function as constraints rather than merely as one factor among others. That gap points toward Kant's territory.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; A SATIRICAL ILLUSTRATION: SWIFT'S <em>A MODEST PROPOSAL</em></div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In 1729, more than a century before Mill wrote <em>Utilitarianism</em>, the Anglo-Irish satirist Jonathan Swift published a pamphlet titled <em>A Modest Proposal</em>. Writing in the calm, reasonable voice of an economic reformer, Swift's narrator proposes that impoverished Irish families sell their one-year-old children as food for wealthy households, thereby relieving poverty, providing income for the poor, and reducing a "surplus population," all argued through careful cost-benefit reasoning, complete with projected yields and prices.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;"><strong>Swift's "proposal" is satire, not a sincere recommendation.</strong> He is impersonating the voice of pure aggregative calculation to expose what happens when a way of reasoning tracks only the arithmetic of costs and benefits, without any independent principle protecting persons from being treated as commodities. The narrator's tone is perfectly reasonable and procedurally rigorous throughout; that composure is precisely the horror. He never once asks whether children have a claim not to be eaten regardless of how the numbers work out.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Swift is not attacking Mill specifically; <em>Utilitarianism</em> would not exist for over a hundred years. But the pamphlet dramatizes exactly the danger named in Objection Three: a moral calculus that tracks only aggregate welfare, with no independent constraint of justice, can in principle be made to justify atrocity, provided the numbers are arranged correctly. This is why the essay belongs here rather than as a stand-alone literary curiosity: it gives the abstract worry about aggregation a face, and a queasy one.</p>
+
+        <div class="optima-widget ow-select">
+          <div class="widget-kicker">&#9889; TRY IT &middot; NAME THE OBJECTION</div>
+          <div class="widget-question">Match each case to the objection it illustrates.</div>
+
+          <div class="widget-row" data-correct="1" data-fb="Right. Swift's satirical economist reasons in pure cost-benefit terms and never asks whether children have a claim not to be treated as commodities. That is the justice/aggregation problem, dramatized." data-hint="Ask whether the issue is an impossible calculation, or a calculation that ignores an individual's claim not to be used as a means.">
+            <div class="widget-row-prompt">1. Swift's satirical narrator calculates the economic yield of selling children as food, and never once asks whether children can be treated this way at all</div>
+            <div class="widget-options">
+              <button data-choice="0">Calculation problem</button>
+              <button data-choice="1">Justice problem</button>
+              <button data-choice="2">Special relationships problem</button>
+            </div>
+          </div>
+
+          <div class="widget-row" data-correct="2" data-fb="Right. A parent's obligation to their own child is not naturally explained as one input among many in an impartial welfare calculation; it seems to be a different kind of claim entirely." data-hint="Ask whether the issue is about predicting outcomes, protecting a stranger's rights, or the special claim a particular relationship makes on you.">
+            <div class="widget-row-prompt">2. A parent who calculates whether saving their own drowning child or a stranger who could cure a disease produces more aggregate good</div>
+            <div class="widget-options">
+              <button data-choice="0">Calculation problem</button>
+              <button data-choice="1">Justice problem</button>
+              <button data-choice="2">Special relationships problem</button>
+            </div>
+          </div>
+
+          <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; WHAT UTILITARIANISM ESTABLISHES, AND THE TURN TO KANT</div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;"><strong>Objection Four: it ignores the special claims of relationships.</strong> Utilitarianism requires impartiality, but our moral lives are not impartial; we owe our children and friends something that does not reduce to their contribution to aggregate welfare. Mill's theory can only say that strong relationships are instrumentally valuable to overall happiness, which seems to get the order of explanation backwards. This objection resurfaces in Aristotle's treatment of friendship in Week 15.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Despite these four objections, utilitarianism establishes real things any adequate moral theory must reckon with: consequences matter, everyone's welfare counts equally, and morality must be practical enough to guide real decisions. What it leaves unresolved is the problem of persons: whether individuals have claims that cannot be traded off against aggregate benefit, and why. Kant's fundamental insight is that morality cannot be grounded in consequences or in any contingent feature of experience, including happiness, because doing so makes persons calculable inputs to a sum. For Kant, every rational person has a dignity that cannot be traded off against aggregate welfare at all. Understanding why requires understanding what Kant means by reason, and what he thinks reason alone can reveal about moral obligation.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Week 13 Reading Quiz</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Covers Lessons 13a, 13b, and 13c. In Canvas.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Lesson 14a: Why Reason, Not Feeling, Is the Basis of Morality</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Kant argues that morality must be grounded in reason alone, independent of consequences or happiness.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; HOLD ONTO THIS</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Swift's satirical economist never breaks a single rule of arithmetic. That is exactly what should worry you about any moral reasoning that stops at arithmetic.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; PHILOSOPHY HONORS &middot; Quarter 2 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 13c &middot; Objections and Replies</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

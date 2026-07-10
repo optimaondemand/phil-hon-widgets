@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Philosophy Honors &mdash; Lesson 13b</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">PHILOSOPHY HONORS</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 4</div>
+        <div style="font-size: 12px; color: #666;">The Good Life</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 13b</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">The Principle of Utility and the Hedonist Calculus</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">The Good Life</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 13b</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Principle of Utility and the Hedonist Calculus</div>
+        <div style="font-size: 16px; color: #666;">Lesson</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">A sheriff can prevent a deadly riot by executing one innocent man. The math says: do it. Something in you says: absolutely not. Which one wins?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">The Principle of Utility sounds clean: do whatever produces the most happiness for the most people. The hard part is what it demands in practice, identifying everyone affected, measuring their happiness, adding it up, and comparing the total to every alternative. This lesson works through what that calculus actually requires, where it breaks down, and how rule utilitarianism tries to repair it.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain the scope of the utilitarian calculus and the "each to count for one" principle.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> state the calculation, justice, and demandingness problems facing act utilitarianism.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain rule utilitarianism and why it responds to some, but not all, of these problems.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">John Stuart Mill, <em>Utilitarianism</em>, Chapter II (continued)</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; WHO COUNTS, AND THE PROBLEM OF SCALE</div>
+
+        <div class="optima-widget ow-reflect">
+          <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
+          <div class="widget-question">Before you read further: do you think it is possible, even in principle, to calculate the total happiness an action produces for everyone it affects? (No wrong answer.)</div>
+          <div class="widget-options">
+            <button data-response="Keep that confidence in view as the lesson lays out exactly how large and how uncertain the calculation actually gets.">&#9989; Yes, at least approximately</button>
+            <button data-response="That skepticism is exactly what fuels the calculation problem below. See whether Mill's own reply to it satisfies you.">&#10060; No, it seems practically impossible</button>
+          </div>
+          <div class="widget-feedback"></div>
+          <button class="widget-reset">Reset</button>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">To apply the Principle of Utility, you would need to identify everyone whose happiness is affected by an action, measure how much happiness or unhappiness it produces for each of them, add up the totals, and compare the result to every alternative action. Bentham's criterion was "each to count for one, and none for more than one": a king's happiness does not outweigh a servant's. Mill endorses this and extends it, at least implicitly, to any being capable of pleasure and pain. But major decisions affect enormous numbers of people in unpredictable ways, and even ordinary personal choices ripple outward. How is anyone supposed to actually perform this calculation?</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; ACT UTILITARIANISM'S DIFFICULTIES</div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;"><strong>Act utilitarianism</strong> evaluates each individual action by its actual consequences. It faces three well-known objections. The <strong>calculation problem</strong>: we rarely know the full consequences of our actions, so a theory that demands evaluating actual consequences seems to demand a foresight human beings don't have. The <strong>justice problem</strong>: a sheriff who knows that executing one innocent person will prevent a riot that kills five seems, by strict act-utilitarian logic, obligated to execute them, a conclusion most people's intuitions reject outright. The <strong>demandingness problem</strong>: if the right action always maximizes overall happiness, then almost nothing ordinary, an hour of leisure instead of donating to charity, is fully justified; the theory seems to demand constant self-sacrifice.</p>
+
+        <div class="optima-widget ow-select">
+          <div class="widget-kicker">&#9889; TRY IT &middot; NAME THE OBJECTION</div>
+          <div class="widget-question">Match each scenario to the objection it illustrates.</div>
+
+          <div class="widget-row" data-correct="2" data-fb="Right. Sacrificing an innocent person's rights for aggregate benefit is exactly the justice problem: the calculus seems to endorse what intuition rejects." data-hint="Ask whether the issue is an innocent person's rights, an impossible prediction, or an unreasonable personal sacrifice.">
+            <div class="widget-row-prompt">1. A judge convicts someone they privately know is innocent, because doing so will prevent a riot that would kill five people</div>
+            <div class="widget-options">
+              <button data-choice="0">Calculation problem</button>
+              <button data-choice="1">Demandingness problem</button>
+              <button data-choice="2">Justice problem</button>
+            </div>
+          </div>
+
+          <div class="widget-row" data-correct="1" data-fb="Right. If every leisure hour must be justified against its highest-utility alternative, the theory seems to demand a level of constant self-sacrifice most people find unlivable." data-hint="Ask whether the issue is about predicting outcomes, protecting an individual's rights, or an unreasonable personal cost.">
+            <div class="widget-row-prompt">2. A student feels obligated to donate every spare hour and dollar to charity rather than spend any of it on friends or hobbies</div>
+            <div class="widget-options">
+              <button data-choice="0">Calculation problem</button>
+              <button data-choice="1">Demandingness problem</button>
+              <button data-choice="2">Justice problem</button>
+            </div>
+          </div>
+
+          <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; RULE UTILITARIANISM AND WHAT THE CALCULUS GETS RIGHT</div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Mill's text suggests a different way of applying the principle, later labeled <strong>rule utilitarianism</strong>: instead of asking what action produces the most happiness in this particular case, ask what rule, generally followed, would produce the most happiness over time, and then follow that rule even when deviating might seem to help in a single instance. Rules create reliability and trust; a society that reliably refuses to punish the innocent produces far more welfare, overall, than one that recalculates case by case. Whether rule utilitarianism is a genuine improvement, or collapses back into act utilitarianism under pressure, remains a long-standing debate: if utility is what ultimately matters, why not break the rule whenever the numbers favor it?</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A deeper worry, the <strong>aggregation problem</strong>, asks whether you can really add up separate people's happiness into a single sum at all. My pain is mine; your pleasure is yours; treating five people's happiness as "outweighing" one person's suffering performs an operation with no obvious basis in anyone's actual experience. Still, despite these difficulties, the calculus establishes something real: consequences matter, everyone's welfare counts equally, and morality has to be practical enough to guide real decisions under real constraints. What it leaves unresolved is exactly the problem of persons, whether individuals have claims that cannot be traded off against aggregate welfare, and why. That is where Kant's alternative, taken up in Week 14, begins.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Lesson 13c: Objections and Replies</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Working through Mill's own defense of utilitarianism against its four strongest objections.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; HOLD ONTO THIS</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">A rule followed reliably, even at a cost in one hard case, can produce more good overall than a calculation redone from scratch every time. That trade-off, reliability versus optimization, will not disappear once you leave this lesson.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; PHILOSOPHY HONORS &middot; Quarter 2 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 13b &middot; The Principle of Utility and the Hedonist Calculus</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
