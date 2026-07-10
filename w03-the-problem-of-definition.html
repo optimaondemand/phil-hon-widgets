@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Philosophy Honors &mdash; Lesson 3a</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">PHILOSOPHY HONORS</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 12px; color: #666;">An Invitation to Philosophy</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 3a</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">The Problem of Definition</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">An Invitation to Philosophy</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 3a</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Problem of Definition: Meno's Search for Virtue</div>
+        <div style="font-size: 16px; color: #666;">Lesson</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Can virtue be taught? Before that question can be answered, a harder one has to be: what is virtue?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Meno, a young Thessalian who has studied with the Sophist Gorgias, puts the question to Socrates without preamble. He expects a direct reply. Socrates obliges him, but not in the way he expects: &ldquo;I confess, Meno, to my shame, that I know literally nothing about virtue; and when I do not know the &lsquo;what' of anything, how can I know the &lsquo;what sort'?&rdquo; <em>(Meno, 71a&ndash;b)</em> Before we can ask whether virtue can be taught, we need to know what virtue is, and this lesson shows how hard that question turns out to be.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain why a list of virtues is not the same as a definition of virtue.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> trace why Meno's three attempted definitions of virtue each fail.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain the torpedo fish comparison and what it reveals about the state Meno is left in.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Plato's <em>Meno</em>, assigned excerpt: &ldquo;Meno's List and the Bee&rdquo;</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; WHO IS MENO?</div>
+
+        <div class="optima-widget ow-reflect">
+          <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
+          <div class="widget-question">If someone asked you right now, "what is virtue?", how quickly could you answer? (No wrong answer.)</div>
+          <div class="widget-options">
+            <button data-response="Meno felt the same way at first. Watch how quickly that confidence gets tested.">&#9889; Pretty quickly, I have a rough idea</button>
+            <button data-response="That hesitation is honest, and it is exactly where this lesson is headed.">&#129300; I'd need a minute to think</button>
+            <button data-response="Fair. By the end of this lesson you'll see that even confident, well-read people struggle here.">&#128533; Honestly, I'm not sure I could</button>
+          </div>
+          <div class="widget-feedback"></div>
+          <button class="widget-reset">Reset</button>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Meno is not a comic figure. He is educated, confident, and articulate, a man whose confidence is genuine and whose ignorance is therefore all the more instructive. He is, in this respect, very like Euthyphro. The historical Meno of Thessaly was also, by most ancient accounts, a mercenary commander of questionable character; the man who opens a dialogue about virtue by claiming to know what it is will turn out to have a reputation for very little of it himself. Whether or not students know this history, the point stands on its own: the confidence with which Meno approaches the question is the first thing that will be shaken.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; MENO'S FIRST ANSWER: A LIST</div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">When Socrates asks what virtue is, Meno gives the most natural kind of answer: a man's virtue is to administer the state well and help friends while harming enemies; a woman's virtue is to manage the household and obey her husband. Every age and condition of life has a different virtue: &ldquo;there are virtues numberless&hellip; for virtue is relative to the actions and ages of each of us in all that we do.&rdquo; <em>(Meno, 71e&ndash;72a)</em></p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Meno has given a list of virtues, not a definition of virtue. Socrates reaches for an analogy: if someone asked what a bee is, and you replied by listing kinds of bees, the honeybee, the bumblebee, the carpenter bee, you would not have answered the question. You would have identified instances without saying what they all have in common as bees. &ldquo;I want to ask you not to think that you have given me an account of virtue,&rdquo; Socrates says. &ldquo;I want to know about this very virtue itself, the virtue that is present in all of these.&rdquo; <em>(Meno, 72c, paraphrased)</em> The demand is identical to what we saw in the <em>Euthyphro</em>: an essence, not a list.</p>
+
+        <div style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #1B6A94; margin-bottom: 8px;">&#128161; WHAT MAKES THIS HARDER THAN THE EUTHYPHRO</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">Piety is one virtue among several; virtue is the whole category. To define virtue, you need to know not just what courage is or what justice is, but what courage, justice, temperance, and wisdom all have in common. A soldier's courage and a mother's patience look very different, exercised in different circumstances, involving different emotions and skills. Are they instances of the same thing? If so, what is that thing?</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; MENO'S SECOND AND THIRD ATTEMPTS</div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Meno's second attempt is that virtue is the power of governing men. This fails the same way as the first: it applies only to people with authority over others, and does not cover the virtue of children, servants, or a slave, who has no one to govern, even though we readily call slaves virtuous or vicious.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">His third attempt is more sophisticated: virtue is the desire for beautiful things and the ability to attain them. Socrates asks whether the desire must be for genuinely good things, or merely for what one believes to be good. If the latter, then someone who desires and attains something bad, power gained through injustice, would count as virtuous, which seems wrong. If the former, the definition collapses: everyone desires what they take to be good, so the distinguishing feature of virtue must lie in the nature of what is desired, not in the mere having of the desire.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">By now Meno is in difficulty. He makes a comparison that has become famous: he says Socrates is like a torpedo fish, a ray that numbs whatever touches it. Before meeting Socrates he had spoken eloquently about virtue many times; now he cannot even say what it is. Socrates accepts the image, with one qualification: the torpedo fish numbs others because it is itself numb. &ldquo;I perplex others, not because I am clear, but because I am utterly perplexed.&rdquo; <em>(Meno, 80c)</em></p>
+
+        <div class="optima-widget ow-select">
+          <div class="widget-kicker">&#9889; TRY IT &middot; WHY DID IT FAIL?</div>
+          <div class="widget-question">Match each of Meno's attempts to the specific reason it did not survive.</div>
+
+          <div class="widget-row" data-correct="2" data-fb="Right. A list of separate virtues for men, women, and slaves never says what makes each one a virtue in the first place." data-hint="Ask whether this answer is a definition, or just a collection of examples.">
+            <div class="widget-row-prompt">1. Attempt 1: separate virtues for men, women, children, and slaves</div>
+            <div class="widget-options">
+              <button data-choice="0">Fails because it excludes slaves entirely</button>
+              <button data-choice="1">Fails because it contradicts itself</button>
+              <button data-choice="2">Fails because it is a list of instances, not a shared essence</button>
+              <button data-choice="3">Fails because it is historically inaccurate</button>
+            </div>
+          </div>
+
+          <div class="widget-row" data-correct="0" data-fb="Right. A slave has no one to govern, yet we still call some slaves virtuous, so this definition cannot be the shared essence." data-hint="Think about who this definition leaves out, and whether that group can still be virtuous.">
+            <div class="widget-row-prompt">2. Attempt 2: virtue is the power of governing men</div>
+            <div class="widget-options">
+              <button data-choice="0">Fails because it wrongly excludes people with nothing to govern</button>
+              <button data-choice="1">Fails because it only applies to Athenian citizens</button>
+              <button data-choice="2">Fails because Meno cannot pronounce it correctly</button>
+              <button data-choice="3">Fails because Socrates finds it offensive</button>
+            </div>
+          </div>
+
+          <div class="widget-row" data-correct="3" data-fb="Right. Since everyone desires what they believe is good, the definition cannot distinguish virtuous people from anyone else unless it specifies the object desired must actually be good." data-hint="Think about whether this definition can tell a virtuous person apart from literally anyone with a desire.">
+            <div class="widget-row-prompt">3. Attempt 3: virtue is desiring beautiful things and being able to attain them</div>
+            <div class="widget-options">
+              <button data-choice="0">Fails because beauty cannot be defined</button>
+              <button data-choice="1">Fails because it is too narrow to cover any real case</button>
+              <button data-choice="2">Fails because it applies only to artists</button>
+              <button data-choice="3">Fails because everyone desires what they believe good, so it cannot distinguish virtue unless it specifies the desire is for what is truly good</button>
+            </div>
+          </div>
+
+          <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Continue to Lesson 3b</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Meno turns the tables: if you don't already know what virtue is, how could you ever recognize it if you found it? A genuine puzzle about inquiry itself.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; HOLD ONTO THIS</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Being numbed by the torpedo fish is not a defeat. It is Meno discovering, honestly, that a question he assumed was easy is actually one of the hardest in the dialogue.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; PHILOSOPHY HONORS &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 3a &middot; The Problem of Definition</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

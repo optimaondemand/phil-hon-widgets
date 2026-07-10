@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Philosophy Honors &mdash; Lesson 2a</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">PHILOSOPHY HONORS</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 12px; color: #666;">An Invitation to Philosophy</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 2a</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Introduction to Doing Philosophy</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">An Invitation to Philosophy</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 2a</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Introduction to Doing Philosophy</div>
+        <div style="font-size: 16px; color: #666;">Lesson</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Philosophical questions do not come out of thin air. They arise from the middle of ordinary life.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">The <em>Apology</em> told us the unexamined life is not worth living, but that does not mean the examined life is automatically worth living. You can examine your life in the wrong way, asking the wrong questions or answering the right questions badly. Plato's dialogues coach you in the practice. The <em>Euthyphro</em>, this week's text, wants you to practice three tasks: knowing which questions matter, answering them, and testing your answers.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> summarize the situation that opens the <em>Euthyphro</em> and why it was unconventional by Athenian standards.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> recognize when a concept is being used as a term of justification rather than mere description.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> connect Euthyphro's situation to a comparable modern example of appealing to a value to justify an action.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Plato's <em>Euthyphro</em>, assigned excerpt: &ldquo;Euthyphro's First Definitions&rdquo;</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A COACH, NOT A LECTURER</div>
+
+        <div class="optima-widget ow-reflect">
+          <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
+          <div class="widget-question">Think of a word people around you use to justify their choices, like "fair," "loyal," or "respectful." How confident are you that you could define it precisely if pressed? (No wrong answer.)</div>
+          <div class="widget-options">
+            <button data-response="Good. Hold onto that confidence. This lesson is going to test whether it survives contact with a real case.">&#128170; Very confident</button>
+            <button data-response="That's an honest place to start, and it's exactly where Euthyphro starts too.">&#129300; Not sure, actually</button>
+            <button data-response="That instinct is worth trusting. Watch for it in this lesson's example.">&#128064; I think it depends on the situation</button>
+          </div>
+          <div class="widget-feedback"></div>
+          <button class="widget-reset">Reset</button>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Plato's Socratic dialogues are not primarily meant to convince you of a doctrine, at least not directly. They are meant to show you how to think, and what to think about. Plato does not want to fill your head with information; he wants to turn you into a certain kind of person. Think of him like the coach of a rugby team: a coach does not simply tell players what rugby is and how to win, and does not play the game for them while they watch. The coach makes players practice under guidance, adjusting as needed. Practice is always the method.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">One dialogue clearly meant for philosophical practice is the <em>Euthyphro</em>, named after Socrates' dialogue partner. Plato wants you to practice three tasks essential to philosophy: understanding which questions matter, answering the ones that do, and testing your answers.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE EXAMINED LIFE, IN THE MIDDLE OF A REAL SITUATION</div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The dialogue begins when Socrates' interlocutor, Euthyphro, tells him that he intends to prosecute his own father. According to Euthyphro, his father was responsible for the death of a dependent laborer under his care. Citizens did not typically prosecute their own parents, even for serious offenses; children were expected to respect parental authority and leave justice to other citizens. Euthyphro's plan is deeply unconventional by fourth-century Athenian standards.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Modern readers may be tempted to admire Euthyphro's reasoning: isn't it good to put justice before personal loyalty? But someone in Socrates' position would not have seen it that way, and modern readers are likely to be distracted by associations that are simply irrelevant to this dialogue. The underlying question is not so different from our own experience, though, once we make a few adjustments.</p>
+
+        <div style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #1B6A94; margin-bottom: 8px;">&#128161; A MODERN PARALLEL</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">Jill's mother has acquired a miniature schnauzer she treats more like a child than a pet, bringing it everywhere, including places with "no pets" signs. It has embarrassed Jill, who has confronted her mother about it and been brushed off. Jill posts to social media denouncing her mother's behavior. A reasonable person might think: everyone has a difficult family member; that does not mean you air your grievances publicly. The principle at work, that children should be long-suffering toward their parents, is one the <em>Euthyphro</em> discusses explicitly: this attitude was considered an instance of <em>piety</em>.</div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">We often justify particular moral judgments by appealing to broader values this way. Consider: <em>Person A</em> says you should give money to the poor because that is generous. <em>Person B</em> asks why they should be generous. <em>Person A</em> answers: because you should love your neighbor as yourself. Love is being used as a reason to think generosity is a value. Similarly, if piety is a value, then so, Jill and Euthyphro both claim, is their unconventional public act.</p>
+
+        <details style="background: #FFFFFF; border: 1px solid #D0D9E8; border-left: 4px solid #C7922C; border-radius: 6px; padding: 12px 18px; margin: 14px 0;">
+            <summary style="font-size: 16px; color: #0E1C42; cursor: pointer; list-style: none;"><span style="color: #C7922C;">&#9654;</span>&nbsp; Read the imagined dialogue between Socrates and Jill</summary>
+            <div style="font-size: 17px; color: #1a2340; line-height: 1.6; margin-top: 10px; padding-top: 10px; border-top: 1px solid #EEF1F8;">
+                <p><strong>Socrates:</strong> Hello, Jill. What are you doing on that device of yours?</p>
+                <p><strong>Jill:</strong> Oh hi, Socrates. I'm just finishing up a post I'm writing. I'm reading it again to make sure I've gotten it right.</p>
+                <p><strong>Socrates:</strong> You seem anxious. You're biting your nails. It must be quite a serious matter.</p>
+                <p><strong>Jill:</strong> Well, sort of. Some people might be upset after I post it.</p>
+                <p><strong>Socrates:</strong> If what you say is true, then no friend of truth will have cause to be angry.</p>
+                <p><strong>Jill:</strong> Someone will have cause to be angry precisely because what I say is true.</p>
+                <p><strong>Socrates:</strong> This person must be an enemy of truth, then. You plan to expose this person on social media?</p>
+                <p><strong>Jill:</strong> I guess you could say that. It's more that I don't want to be associated with her behavior.</p>
+                <p><strong>Socrates:</strong> Why would people think her bad actions touch you?</p>
+                <p><strong>Jill:</strong> Because she is my mother, Socrates.</p>
+                <p><strong>Socrates:</strong> Your mother! And she is accused of, what, exactly? It must be a very serious matter.</p>
+                <p><strong>Jill:</strong> I just couldn't take it anymore. The way she treats that dog is wrong. Nobody disagrees with me. Instead, they say I should be "long-suffering." They say it is impious for a daughter to call out her mother on the internet. But I believe calling her out is actually the <em>pious</em> thing to do.</p>
+            </div>
+        </details>
+
+        <div class="optima-widget ow-select">
+          <div class="widget-kicker">&#9889; TRY IT &middot; EXAMPLE OR PRINCIPLE?</div>
+          <div class="widget-question">Socrates is always ultimately asking whether someone can give the principle behind their claim, not just point to a case. Sort each statement below.</div>
+
+          <div class="widget-row" data-correct="2" data-fb="Right. Jill is pointing to her own case, not saying what makes any act pious in general." data-hint="Ask: does this statement name a general rule, or point to one specific case?">
+            <div class="widget-row-prompt">1. &ldquo;Calling out my mother is the pious thing to do.&rdquo;</div>
+            <div class="widget-options">
+              <button data-choice="0">A general principle</button>
+              <button data-choice="1">A counterexample</button>
+              <button data-choice="2">A single instance, offered as if it were a principle</button>
+              <button data-choice="3">A definition Socrates would accept immediately</button>
+            </div>
+          </div>
+
+          <div class="widget-row" data-correct="0" data-fb="Right. Long-suffering toward parents is offered as a general rule that would apply across many different cases, not just Jill's." data-hint="This one is meant to cover many different children and many different parents, not just one case.">
+            <div class="widget-row-prompt">2. &ldquo;Children should be long-suffering toward their parents, even tolerating their faults.&rdquo;</div>
+            <div class="widget-options">
+              <button data-choice="0">A general principle</button>
+              <button data-choice="1">A single instance offered as a principle</button>
+              <button data-choice="2">An irrelevant detail</button>
+              <button data-choice="3">A refutation</button>
+            </div>
+          </div>
+
+          <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; THE PRINCIPLES OF EXAMINATION</div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Jill and Euthyphro may or may not be right. Socrates wants to find out. Euthyphro has said that piety would lead him to prosecute his father, and he intends to act on that belief. Socrates does not necessarily disagree with the action; he wants to understand why it is right, if it is, and how principles about the deepest truths should inform ordinary life. In other words, Socrates wants wisdom, and wisdom, as the <em>Apology</em> told us, begins with honest recognition of what we do not know.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Euthyphro knows what he intends to do. He is certain his action is pious. But can he say what piety is? Can he give the kind of account that would make his confidence defensible rather than merely confident? The <em>Euthyphro</em> is an exercise in finding out. Lesson 2b examines, one by one, the definitions Euthyphro offers, and what Socrates does with each of them.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Continue to Lesson 2b</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Watch Socrates test Euthyphro's three attempted definitions of piety, and learn the tools he uses to test any definition.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; HOLD ONTO THIS</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Every serious philosophical question starts life as an ordinary disagreement. What separates philosophy from an argument on the internet is the willingness to stop and ask what the word doing the justifying actually means.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; PHILOSOPHY HONORS &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 2a &middot; Introduction to Doing Philosophy</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Philosophy Honors &mdash; Lesson 1a</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .ow-scale .widget-options { justify-content: space-between; }
+    .ow-scale .widget-options button { flex: 1; text-align: center; }
+    .ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+    .ow-flip .ow-flip-back { display: none; color: #1a2340; }
+    .ow-flip.flipped .ow-flip-front { display: none; }
+    .ow-flip.flipped .ow-flip-back { display: block; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">PHILOSOPHY HONORS</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 12px; color: #666;">An Invitation to Philosophy</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 1a</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">The Story of Socrates</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">An Invitation to Philosophy</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 1a</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Story of Socrates</div>
+        <div style="font-size: 16px; color: #666;">Lesson</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">A man on trial for his life defends himself, not with excuses, but with an argument for how to live.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Plato's <em>Apology</em> is an unusual way to begin a philosophy course. It is not a treatise or a lecture. It is a defense speech, delivered by a seventy-year-old man charged with impiety and corrupting the youth of Athens, and it is unlike any defense speech Athens had ever heard. Socrates was convicted. He was executed. And in the centuries since, his speech has been read as one of the clearest accounts ever given of what philosophy is and why it matters. This lesson tells the story of how he came to be standing in that courtroom, and what he believed about himself when he stood there.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> describe the political and religious pressures in Athens in 399 BCE that led to Socrates' trial.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain the Delphic oracle's riddle and how Socrates' investigation of it became his life's mission.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> interpret the gadfly image and explain what it reveals about the social function of honest questioning.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Plato's <em>Apology</em>, assigned excerpt: &ldquo;The Oracle and the Gadfly&rdquo;</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">About 20 minutes of reading and reflection time</div>
+        </div>
+    </div>
+
+    <!-- PART 1 -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; ATHENS IN 399 BCE</div>
+
+        <div class="optima-widget ow-reflect">
+          <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
+          <div class="widget-question">Before you read further: when you hear the word &ldquo;philosopher,&rdquo; what image comes to mind? (No wrong answer, just check in with yourself.)</div>
+          <div class="widget-options">
+            <button data-response="That image isn't wrong, but it may get complicated by the end of this lesson. Socrates was executed for the way he practiced philosophy in public.">&#129504; Someone quiet, thinking alone</button>
+            <button data-response="Closer than you might expect. Socrates spent his days in the Agora, questioning politicians, poets, and craftsmen in public, and it made him enemies.">&#128172; Someone who argues about big questions</button>
+            <button data-response="Fair guess, and one Socrates himself would push back on hard. He insisted he had no special wisdom at all.">&#127891; Someone very wise and well-read</button>
+          </div>
+          <div class="widget-feedback"></div>
+          <button class="widget-reset">Reset</button>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">A City Under Strain</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Athens in the fifth century BCE was one of the most extraordinary cities in history: one of the first democracies, home to the Parthenon, to Sophocles and Euripides, to Thucydides and Pericles. Its central marketplace, the Agora, was a place where citizens gathered not only to buy and sell but to debate and dispute. Athens prided itself on the belief that free inquiry was a civic virtue.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">It was also, by 399 BCE, a city under serious strain. The late fifth century had been catastrophic: Athens fought and lost the twenty-seven-year Peloponnesian War against Sparta, leaving the city exhausted and unstable. In 404 BCE, a Spartan-backed oligarchy known as the Thirty Tyrants seized power and ruled with violence for about a year before democracy was restored. Among the young men associated with the Thirty were former companions of Socrates, most notably Critias, one of the oligarchy's ringleaders. The restored democracy had granted an amnesty for crimes committed under the Thirty, which is why Socrates' accusers could not charge him directly with political treachery. So they charged him instead with impiety and corrupting the youth.</p>
+
+        <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 22px; margin: 16px 0;">
+            <div style="font-size: 11px; color: #6b7a99; margin-bottom: 14px; letter-spacing: 0.4px;">A ROUGH TIMELINE</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 0;">
+                <div style="flex: 1; min-width: 150px; border-left: 3px solid #C7922C; padding: 4px 14px; margin-bottom: 10px;">
+                    <div style="font-size: 13px; color: #C7922C;">431&ndash;404 BCE</div>
+                    <div style="font-size: 15px; color: #1a2340;">Peloponnesian War against Sparta; Athens loses</div>
+                </div>
+                <div style="flex: 1; min-width: 150px; border-left: 3px solid #C7922C; padding: 4px 14px; margin-bottom: 10px;">
+                    <div style="font-size: 13px; color: #C7922C;">404&ndash;403 BCE</div>
+                    <div style="font-size: 15px; color: #1a2340;">The Thirty Tyrants rule Athens by force</div>
+                </div>
+                <div style="flex: 1; min-width: 150px; border-left: 3px solid #C7922C; padding: 4px 14px; margin-bottom: 10px;">
+                    <div style="font-size: 13px; color: #C7922C;">403 BCE</div>
+                    <div style="font-size: 15px; color: #1a2340;">Democracy restored; a general amnesty is declared</div>
+                </div>
+                <div style="flex: 1; min-width: 150px; border-left: 3px solid #C7922C; padding: 4px 14px; margin-bottom: 10px;">
+                    <div style="font-size: 13px; color: #C7922C;">399 BCE</div>
+                    <div style="font-size: 15px; color: #1a2340;">Socrates tried on charges of impiety and corrupting the youth</div>
+                </div>
+            </div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The wounds from that year were still fresh. The city that tried Socrates was nervous, suspicious of intellectuals, and freshly aware of what happened when clever people with unconventional ideas gained influence over young men.</p>
+    </div>
+
+    <!-- PART 2 -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; WHO WAS SOCRATES?</div>
+
+        <div style="text-align: center; margin: 10px 0 18px 0;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Socrates_Louvre.jpg" alt="Roman marble bust of Socrates, Louvre Museum, after a lost bronze original attributed to Lysippus" style="max-width: 260px; width: 100%; border-radius: 8px; border: 1px solid #D0D9E8;" />
+            <div style="font-size: 13px; color: #666; margin-top: 8px;">Portrait of Socrates. Roman marble copy, Louvre Museum, likely after a lost bronze original by Lysippus. Photo: Eric Gaba, CC BY-SA 2.5.</div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Socrates was born around 470 BCE in Athens and lived his entire life there. His father was a stonecutter; his mother, according to tradition, was a midwife, and Socrates borrowed that second profession as a metaphor for his own philosophical practice. Just as a midwife does not herself give birth but helps others bring forth what is already within them, Socrates claimed not to teach but to assist others in drawing out understanding already latent within them. He called this technique <em>maieutics</em>, from the Greek word for midwifery.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">He did not lecture. He did not found a school. He did not charge fees. He did not write treatises (the dialogues we read are by Plato, his student; Socrates himself left nothing in writing). What he did, obsessively, was talk: he walked through the streets of Athens and talked with politicians, craftsmen, poets, generals, and the young men who found his company irresistible.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">What he cared about, and what made him a disruptive presence in Athens, was whether people actually knew what they claimed to know. He questioned politicians about justice, generals about courage, poets about what their poems meant. He pressed until his interlocutors were forced either to refine their thinking or admit they could not answer. Most chose to become angry. The resulting enemies, he says in the <em>Apology</em>, were &ldquo;of the worst and most dangerous kind.&rdquo; <em>(Apology, 23a)</em></p>
+
+        <div style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #1B6A94; margin-bottom: 8px;">&#128161; HELPFUL TO KNOW</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">Socrates was famously ordinary in his material life: ugly by conventional Greek standards, indifferent to fine food and clothing, able to stand in thought for hours without moving. All of this was reported not as eccentricity but as evidence of a consistent practice. Socrates cared about the soul and its condition, not at all about the body's comforts.</div>
+        </div>
+    </div>
+
+    <!-- PART 3 -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; THE ORACLE AND ITS RIDDLE</div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Near the beginning of the <em>Apology</em>, Socrates explains how he came to live as he did. The story begins with his friend Chaerephon, whom he describes with mild affection as &ldquo;impetuous in all his doings.&rdquo; Chaerephon had gone to the oracle at Delphi, the most prestigious oracle in the Greek world, and asked whether anyone was wiser than Socrates. The Pythia, the oracle's spokesperson, replied: no one.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">This reply was genuinely puzzling to Socrates. He was convinced he was not wise in any substantial sense. He could not dismiss the answer either: the oracle speaks for a god, and a god does not lie. So he began a thorough investigation to find out what the god could have meant.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">He went first to the politicians, the men with the highest reputations for wisdom. He found that while they knew nothing he would call genuine wisdom, they were confidently unaware of this fact. They thought they knew. After examining them, Socrates drew a careful balance: &ldquo;I am likely to be a little wiser than they are to this small extent, that I do not think I know what I do not know.&rdquo; <em>(Apology, 21d)</em></p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">He went next to the poets, expecting better results. But when he questioned them about what their own beautiful lines meant, they could not explain it. They spoke well, but speaking well is not the same as understanding: &ldquo;Not by wisdom do poets write poetry,&rdquo; he observed, &ldquo;but by a sort of genius and inspiration.&rdquo; <em>(Apology, 22c)</em> The craftsmen were different: they knew genuine things, real and demonstrable. But because they were expert in one domain, they assumed their expertise extended to justice, to governance, to what is good for a city.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Socrates concluded that the oracle's meaning was this: human wisdom is worth very little. The person who recognizes this, who neither knows something they do not know nor believes they know something they do not, is by that slender margin wiser than those who are confidently ignorant. The oracle was not complimenting Socrates. It was using him as an illustration.</p>
+    </div>
+
+    <!-- PART 4 -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 4 &middot; THE PHILOSOPHER AS GADFLY</div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The investigation that began as a solution to a riddle became a vocation. Socrates came to understand his life's work as a divine commission: to go around Athens demonstrating that human wisdom, at its best, is a kind of organized humility.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">He describes himself as a gadfly: the kind of biting fly that keeps a large horse from sleeping too soundly. Athens is the horse, great, noble, and dangerously prone to complacency. Socrates is the gadfly, stinging it awake.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">&ldquo;I am that gadfly which God has attached to the state, and all day long and in all places am always fastening upon you, arousing and persuading and reproaching you.&rdquo; <em>(Apology, 30e)</em></p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The image is deliberately humble. Socrates is small, annoying, and easy to swat. But he is necessary, and the horse that gets rid of the fly will sleep its way into decline. A city in which the politicians cannot define justice, the generals cannot define courage, and the poets cannot explain what they mean is a city whose confidence in itself is unearned. That gap between confidence and understanding does not disappear when no one points to it. It simply continues doing its damage in silence.</p>
+
+        <div class="optima-widget ow-select">
+          <div class="widget-kicker">&#9889; TRY IT &middot; MATCH THE MOVE</div>
+          <div class="widget-question">Each phrase below is doing a specific job in Socrates' story. Match it to what it is actually doing.</div>
+
+          <div class="widget-row" data-correct="1" data-fb="Right. The gadfly image is about function, not appearance: it explains why an annoying, low-status creature turns out to be necessary to the health of a great city." data-hint="Look again at what the gadfly does to the horse, not what the horse is like.">
+            <div class="widget-row-prompt">1. &ldquo;I am that gadfly which God has attached to the state&hellip;&rdquo;</div>
+            <div class="widget-options">
+              <button data-choice="0">Describes Socrates' physical appearance</button>
+              <button data-choice="1">Explains the social function of honest questioning</button>
+              <button data-choice="2">Argues that Socrates is more powerful than Athens</button>
+              <button data-choice="3">Insults the jury who convicted him</button>
+            </div>
+          </div>
+
+          <div class="widget-row" data-correct="2" data-fb="Right. This is the balance Socrates draws after examining the politicians: he does not claim to know anything positive, only to lack a specific false confidence others have." data-hint="This line is a careful, narrow claim, not a boast.">
+            <div class="widget-row-prompt">2. &ldquo;I am likely to be a little wiser than they are to this small extent, that I do not think I know what I do not know.&rdquo;</div>
+            <div class="widget-options">
+              <button data-choice="0">A claim that Socrates knows more than the politicians</button>
+              <button data-choice="1">A claim that no one can ever know anything</button>
+              <button data-choice="2">A narrow claim about the absence of false confidence</button>
+              <button data-choice="3">A joke at the politicians' expense</button>
+            </div>
+          </div>
+
+          <div class="widget-row" data-correct="0" data-fb="Right. The craftsmen's real, demonstrable skill in one domain led them to overestimate their competence in domains they had never actually examined." data-hint="Think about what the craftsmen actually had, and what they wrongly assumed it gave them.">
+            <div class="widget-row-prompt">3. Why did the craftsmen, unlike the politicians and poets, still fail Socrates' test?</div>
+            <div class="widget-options">
+              <button data-choice="0">Their real skill in one area inflated their confidence in every area</button>
+              <button data-choice="1">They had no genuine knowledge of anything at all</button>
+              <button data-choice="2">They refused to speak with Socrates</button>
+              <button data-choice="3">They were poets in disguise</button>
+            </div>
+          </div>
+
+          <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Continue to Lesson 1b</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Now that you know the story, Lesson 1b asks what Socrates was actually doing when he questioned people, and names his method: elenchus.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Week 1 Reading Quiz</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Due at the end of the week, in Canvas. It covers all three lessons on the <em>Apology</em>.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; HOLD ONTO THIS</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Socrates did not set out to be a philosopher. He set out to solve a riddle. It was the seriousness with which he pursued the answer, testing it against politicians, poets, and craftsmen, that turned an odd errand into a way of life, and eventually into a capital charge. Keep the gadfly image in mind: philosophy's usefulness to a community is not comfort. It is friction, applied honestly.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; PHILOSOPHY HONORS &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 1a &middot; The Story of Socrates</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+})();
+</script>
+
+</body>
+</html>

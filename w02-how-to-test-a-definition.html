@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Philosophy Honors &mdash; Lesson 2b</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">PHILOSOPHY HONORS</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 12px; color: #666;">An Invitation to Philosophy</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 2b</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">How to Test a Definition</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">An Invitation to Philosophy</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 2b</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">How to Test a Definition: Euthyphro's Three Attempts</div>
+        <div style="font-size: 16px; color: #666;">Lesson</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Euthyphro offers three definitions of piety. Watching Socrates take each one apart teaches you how to test any definition.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Euthyphro is standing on the steps of the King Archon's court, about to prosecute his own father, and he is doing it in the name of piety. If he is going to appeal to piety as his justification, Socrates wants to understand what piety actually is. What follows is one of Plato's clearest lessons in philosophical method, and this lesson gives you a precise tool, necessary and sufficient conditions, for understanding exactly why each of Euthyphro's answers fails.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> define necessary and sufficient conditions and use them to evaluate a definition.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain why each of Euthyphro's first two definitions of piety fails, in terms of necessity and sufficiency.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> state the three general tests a definition must pass.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Plato's <em>Euthyphro</em>, assigned excerpt: &ldquo;The Euthyphro Dilemma&rdquo;</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; WHAT SOCRATES IS LOOKING FOR</div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Before examining the definitions, we need to understand what kind of answer Socrates wants. He is not asking for examples of piety. He wants its <em>essence</em>, the one thing that makes all pious acts pious: &ldquo;Tell me what is the nature of this idea, and then I shall have a standard to which I may look, and by which I may measure actions&hellip; and then I shall be able to say that such and such an action is pious, such another impious.&rdquo; <em>(Euthyphro, 6e)</em></p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A list of pious acts will not give him a standard, for the same reason that pointing to gold coins, gold rings, and gold teeth does not tell you what gold is. A definition should give us the principle that explains why each example qualifies.</p>
+
+        <div style="background: #EEF1F8; border-radius: 8px; padding: 18px 22px; margin: 16px 0;">
+            <div style="font-size: 11px; color: #0e1c42; margin-bottom: 10px;">A TOOL FOR TESTING: NECESSARY AND SUFFICIENT CONDITIONS</div>
+            <div style="font-size: 17px; color: #1a2340; line-height: 1.6;">A condition is <strong>necessary</strong> for piety if nothing can be pious without it. If you can find a pious act that lacks the condition, the condition is not necessary.</div>
+            <div style="font-size: 17px; color: #1a2340; line-height: 1.6; margin-top: 10px;">A condition is <strong>sufficient</strong> for piety if having it guarantees the act is pious. If you can find something that has the condition but is not pious, or the condition produces a contradiction, the condition is not sufficient.</div>
+            <div style="font-size: 17px; color: #1a2340; line-height: 1.6; margin-top: 10px;">A good definition of piety needs a condition that is both: present in every pious act, and enough by itself to guarantee an act is pious. Watch for which way each of Euthyphro's answers fails.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; DEFINITION ONE: PIETY IS WHAT I AM DOING</div>
+
+        <div class="optima-widget ow-reflect">
+          <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
+          <div class="widget-question">Before you read Socrates' response: do you think "prosecuting wrongdoers, even your own family" is a good definition of piety? (No wrong answer.)</div>
+          <div class="widget-options">
+            <button data-response="Let's see if Socrates agrees. Watch the necessity test below.">&#128077; Seems reasonable</button>
+            <button data-response="Good instinct. Keep that suspicion active as you read the necessity test.">&#129335; Something feels off about it</button>
+            <button data-response="Fair. Notice that Socrates does not attack Euthyphro's character. He attacks the definition's structure.">&#129300; Not sure how to judge it</button>
+          </div>
+          <div class="widget-feedback"></div>
+          <button class="widget-reset">Reset</button>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Euthyphro's first response points to an example: &ldquo;Piety is doing as I am doing; that is to say, prosecuting any one who is guilty of murder, sacrilege, or of any similar crime, whether he be your father or mother, or whoever he may be, that makes no difference.&rdquo; <em>(Euthyphro, 5d&ndash;e)</em></p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Socrates grants that Euthyphro's action may indeed be pious. But even so, citing it does not answer the question. There are many pious acts, and Euthyphro has pointed to one of them. What Socrates asked for is the general idea that makes all of them pious. Think of the counterexample: is a quiet act of temple sacrifice pious? Almost certainly yes, and it involves no prosecution of anyone. So prosecuting wrongdoers cannot be a <strong>necessary</strong> condition for piety: there are pious acts that do not have it. Euthyphro has the order backward. He is saying, in effect, &ldquo;piety is like what I'm doing right now,&rdquo; which tells us nothing about cases that look very different from his.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; DEFINITION TWO: PIETY IS WHAT THE GODS LOVE</div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Euthyphro tries again with something genuinely general: &ldquo;Piety, then, is that which is dear to the gods, and impiety is that which is not dear to them.&rdquo; <em>(Euthyphro, 7a)</em> This is a real improvement: rather than pointing to a particular act, Euthyphro offers a criterion that could apply to any action.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">But Socrates identifies a problem using something Euthyphro has already conceded: the gods quarrel, and what they quarrel about is precisely questions of justice and right, the same questions at issue in Euthyphro's case. If different gods love and hate the same things, then on Euthyphro's own definition, one and the same act would be both pious and impious at once: &ldquo;Then the same things are hated by the gods and loved by the gods, and are both hateful and dear to them? And upon this view the same things, Euthyphro, will be pious and also impious?&rdquo; <em>(Euthyphro, 8a)</em></p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Being loved by a god turns out not to be a <strong>sufficient</strong> condition for piety: it does not guarantee the act is pious, because the very same act can also be hated by a different god. A definition that makes the same act both pious and impious is not a definition at all. It has failed to distinguish the very things it was supposed to define.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 4 &middot; DEFINITION THREE, IN BRIEF</div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Socrates proposes a revision: what <em>all</em> the gods love is pious, and what all of them hate is impious. Euthyphro accepts this, and the contradiction from Definition Two dissolves, since unanimous approval leaves no room for the same act being both loved and hated. This time, the condition may genuinely be both necessary and sufficient: perhaps it really is true that an act is pious if and only if all the gods love it.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">But Socrates is still not satisfied, and he raises the dialogue's deepest question: is the pious loved by the gods because it is pious, or is it pious because it is loved by the gods? Even a condition that gets the necessary and sufficient facts right can still fail to tell us what piety <em>is</em>, as opposed to something that merely always accompanies it. This question has come to be called the Euthyphro Dilemma, and it deserves its own full treatment: Lesson 2c takes it up in detail.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 5 &middot; THE METHOD</div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">By now the pattern is clear. Each time Euthyphro offers a definition, Socrates takes it seriously and asks what follows from it. Three tests emerge, and they can be applied to any definition: does it give a principle rather than an example (is the condition even a general one)? Does it avoid contradiction (is the condition sufficient)? Does it reach the essence rather than an accompanying attribute?</p>
+
+        <div class="optima-widget ow-select">
+          <div class="widget-kicker">&#9889; TRY IT &middot; NECESSARY OR INSUFFICIENT?</div>
+          <div class="widget-question">For each of Euthyphro's first two definitions, identify exactly how it fails.</div>
+
+          <div class="widget-row" data-correct="1" data-fb="Right. A quiet act of temple worship is pious and involves no prosecution at all, so the condition is not necessary." data-hint="Ask whether every pious act must involve prosecuting someone.">
+            <div class="widget-row-prompt">1. Definition One: piety is prosecuting wrongdoers, regardless of relation</div>
+            <div class="widget-options">
+              <button data-choice="0">Fails as insufficient: some prosecutions are not pious</button>
+              <button data-choice="1">Fails as unnecessary: some pious acts are not prosecutions</button>
+              <button data-choice="2">Passes both tests</button>
+              <button data-choice="3">Fails because Euthyphro is lying</button>
+            </div>
+          </div>
+
+          <div class="widget-row" data-correct="0" data-fb="Right. Since gods disagree, an act loved by one god can be hated by another, so being god-loved does not guarantee piety." data-hint="Ask whether being loved by a god is enough, by itself, to guarantee the act is pious.">
+            <div class="widget-row-prompt">2. Definition Two: piety is what the gods love</div>
+            <div class="widget-options">
+              <button data-choice="0">Fails as insufficient: being god-loved does not guarantee the act is pious, since gods disagree</button>
+              <button data-choice="1">Fails as unnecessary: some pious acts are not loved by any god</button>
+              <button data-choice="2">Passes both tests</button>
+              <button data-choice="3">Fails because the gods do not exist</button>
+            </div>
+          </div>
+
+          <button class="widget-reset">Reset</button>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 10px 0 0 0;">Notice that Socrates does not need to know the correct answer to apply these tests. He takes the proposed definition, follows it where it leads, and lets it stand or fall on its own logic. The dialogue ends without a definition of piety that survives. That, for Plato, is the beginning of philosophy.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Continue to Lesson 2c</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">The full Euthyphro Dilemma: is the good good because God loves it, or loved because it is good?</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; HOLD ONTO THIS</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Necessary and sufficient conditions are not just a philosopher's trick; they are the plain-language question underneath every definition worth having: does this always apply, and does it apply to enough?</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; PHILOSOPHY HONORS &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 2b &middot; How to Test a Definition</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

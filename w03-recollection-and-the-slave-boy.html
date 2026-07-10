@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Philosophy Honors &mdash; Lesson 3c</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .geo-btn { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 9px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; font-family: inherit; }
+    .geo-btn:hover { border-color: #55C8E8; background: #F4F6FA; }
+    .geo-btn.chosen { background: #0E1C42; color: #fff; border-color: #0E1C42; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">PHILOSOPHY HONORS</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 12px; color: #666;">An Invitation to Philosophy</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 3c</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Recollection and the Slave Boy</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">An Invitation to Philosophy</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 3c</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Recollection and the Slave Boy Demonstration</div>
+        <div style="font-size: 16px; color: #666;">Lesson</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Socrates doesn't just answer the paradox. He proves his answer, live, on someone who has never studied geometry.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Lesson 3b left us in aporia over Meno's Paradox: how can you search for something you don't already know how to recognize? Socrates' answer is one of the most extraordinary moves in the history of philosophy. He rejects the strict either/or at the paradox's heart. There is a third possibility: latent knowledge, knowledge that is in some sense already within us, waiting to be recovered.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> state the doctrine of recollection (<em>anamnesis</em>) and how it answers Meno's Paradox.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> walk through the slave boy's geometry problem and explain why doubling the side does not double the area.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain what the demonstration shows about learning as recovery rather than the transfer of information.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Plato's <em>Meno</em>, assigned excerpt: &ldquo;The Paradox and Recollection&rdquo; (second half)</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; SOCRATES' RESPONSE: THE THEORY OF RECOLLECTION</div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The soul, Socrates argues, is immortal. Before birth, it existed elsewhere and learned things. The experience of incarnation, of entering a body and being born into the world, causes it to forget what it knew. But the knowledge is still there, dormant. What we call &ldquo;learning&rdquo; is actually <em>recollection</em>: the process by which the soul re-acquires, through questioning and reasoning, what it already knows at some deeper level. This is the doctrine of <em>anamnesis</em>, from the Greek <em>a</em> (without) plus <em>mnesis</em> (forgetting): literally, un-forgetting.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Socrates describes this as something he received from priests and priestesses and from Pindar the poet: &ldquo;The soul, since it is immortal and has been born many times, has seen all things, both here and in Hades, and there is nothing that it has not learned.&rdquo; <em>(Meno, 81c&ndash;d)</em> If this is true, the paradox dissolves. You can search for something you do not consciously know, because the knowledge is within you already, waiting to be recovered rather than created from scratch.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE SLAVE BOY DEMONSTRATION</div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Socrates does not merely assert the theory. He demonstrates it. He calls over one of Meno's slave boys, who has had no mathematical education, and begins asking him questions about geometry. Through questioning alone, with no direct instruction, the boy is meant to arrive at the correct construction for a specific problem: given a square, how do you build a new square with exactly twice its area? Try the hypothesis the boy tries first, before you read what actually happens.</p>
+
+        <div class="optima-widget">
+          <div class="widget-kicker">&#9889; TRY IT &middot; DOUBLE THE SQUARE, BEFORE YOU PEEK</div>
+          <div class="widget-question">The square below has an area of 4. Pick a way to build a new square with exactly twice the area (area 8). Commit to one before you see what it produces.</div>
+          <div style="display:flex; gap:10px; flex-wrap:wrap; margin-bottom:16px;">
+            <button class="geo-btn" data-target="double-side">Double each side</button>
+            <button class="geo-btn" data-target="two-squares">Set two squares side by side</button>
+            <button class="geo-btn" data-target="diagonal">Build a new square on the diagonal</button>
+          </div>
+          <div style="text-align:center;">
+            <svg id="geoSvg" viewBox="0 0 320 260" style="max-width:340px; width:100%; background:#FFFFFF; border-radius:8px; border:1px solid #D0D9E8;">
+              <rect x="110" y="150" width="60" height="60" fill="#E8F6FB" stroke="#0E1C42" stroke-width="2"></rect>
+              <text x="140" y="185" text-anchor="middle" font-size="15" fill="#0E1C42">4</text>
+
+              <g id="geo-double-side" style="display:none;">
+                <rect x="110" y="90" width="120" height="120" fill="none" stroke="#C0392B" stroke-width="2" stroke-dasharray="5,4"></rect>
+                <text x="200" y="105" text-anchor="middle" font-size="14" fill="#8A1F16">side doubled</text>
+                <text x="170" y="155" text-anchor="middle" font-size="16" fill="#8A1F16">16</text>
+              </g>
+
+              <g id="geo-two-squares" style="display:none;">
+                <rect x="170" y="150" width="60" height="60" fill="#E8F6FB" stroke="#0E1C42" stroke-width="2"></rect>
+                <text x="200" y="185" text-anchor="middle" font-size="15" fill="#0E1C42">4</text>
+                <rect x="108" y="148" width="124" height="64" fill="none" stroke="#C0392B" stroke-width="2" stroke-dasharray="5,4"></rect>
+                <text x="170" y="230" text-anchor="middle" font-size="13" fill="#8A1F16">area 8, but a rectangle, not a square</text>
+              </g>
+
+              <g id="geo-diagonal" style="display:none;">
+                <line x1="110" y1="150" x2="170" y2="210" stroke="#0E1C42" stroke-width="2"></line>
+                <polygon points="110,150 170,210 230,150 170,90" fill="#D8F0DD" fill-opacity="0.55" stroke="#2A9D5C" stroke-width="2"></polygon>
+                <text x="195" y="125" text-anchor="middle" font-size="16" fill="#1A6B3D">8</text>
+              </g>
+            </svg>
+          </div>
+          <div class="widget-feedback" id="geoFeedback"></div>
+          <button class="widget-reset" id="geoReset">Reset</button>
+        </div>
+
+        <script>
+        (function () {
+          var svg = document.getElementById('geoSvg');
+          var feedback = document.getElementById('geoFeedback');
+          var groups = { 'double-side': document.getElementById('geo-double-side'), 'two-squares': document.getElementById('geo-two-squares'), 'diagonal': document.getElementById('geo-diagonal') };
+          var messages = {
+            'double-side': 'Not quite. Doubling each side from 2 to 4 does not double the area. It quadruples it: the new square has area 16, four times the original, not twice. This is the slave boy\'s first, natural guess, and it is wrong for exactly this reason.',
+            'two-squares': 'Closer, but still not a solution. Two identical squares side by side do add up to area 8. But the combined shape is a rectangle, not a square. A definition of "double the area" needs both conditions at once: area 8, and still a square.',
+            'diagonal': 'This is it. The diagonal of the original square becomes the side of the new square. That new square\'s area works out to exactly 8, double the original 4, and it really is a square. This is the construction Socrates leads the boy to, purely through questions.'
+          };
+          var buttons = document.querySelectorAll('.geo-btn');
+          buttons.forEach(function (btn) {
+            btn.addEventListener('click', function () {
+              buttons.forEach(function (b) { b.classList.remove('chosen'); });
+              btn.classList.add('chosen');
+              Object.keys(groups).forEach(function (k) { groups[k].style.display = 'none'; });
+              var target = btn.dataset.target;
+              groups[target].style.display = 'block';
+              feedback.textContent = messages[target];
+              feedback.classList.add('show');
+            });
+          });
+          document.getElementById('geoReset').addEventListener('click', function () {
+            buttons.forEach(function (b) { b.classList.remove('chosen'); });
+            Object.keys(groups).forEach(function (k) { groups[k].style.display = 'none'; });
+            feedback.classList.remove('show');
+            feedback.textContent = '';
+          });
+        })();
+        </script>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 12px 0 10px 0;">This is exactly what happens in the dialogue. The boy's first guess is to double the side, and Socrates lets him work out for himself that this quadruples the area rather than doubling it. Notice the connection to Lesson 2b's tool: doubling the side gives you a square (that condition is satisfied), but the area is wrong (a necessary condition fails). Two squares side by side get the area right, but the shape is wrong (a different condition fails). Only the diagonal construction satisfies both at once.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Socrates is explicit about what he takes the demonstration to establish: &ldquo;These opinions were somewhere in him, were they not?&rdquo; <em>(Meno, 85d)</em> No one taught the boy geometry in this life, and the conclusions are genuinely correct, not lucky guesses. At one point Socrates deliberately leads the boy toward a wrong answer, and the boy's confusion is real; he is not simply agreeing with whatever Socrates says. The eventual correct answer is the product of reasoning, not compliance.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; WHAT THIS MEANS FOR INQUIRY</div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The paradox and its resolution reveal something important about how philosophy conceives of learning. Learning, for Plato, is not the passive receipt of information. It is an active process of recovery, of bringing to conscious awareness what the mind already contains in some form. The right questions do not pour knowledge in from outside; they draw it out from within. This is why Socrates calls himself a midwife: he does not himself possess the knowledge he helps others discover.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Whether or not one accepts the full metaphysics of recollection, the immortality of the soul, the pre-existence of knowledge, the cycle of rebirth, the epistemological point stands on its own. Good questioning genuinely helps people think more clearly. Confusion is often not a sign of an empty mind but of knowledge that has not yet been organized or brought to the surface.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Week 3 Reading Quiz</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Covers Lessons 3a, 3b, and 3c. In Canvas.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Move on to Week 4</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Lesson 4a returns to this same demonstration and asks a harder question: what exactly does it prove, and what does it leave unproven?</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; HOLD ONTO THIS</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Notice that the boy needed to be wrong twice before he was right once. Socrates never treats the wrong guesses as failures to be embarrassed about. They are the necessary path to the diagonal.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; PHILOSOPHY HONORS &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 3c &middot; Recollection and the Slave Boy Demonstration</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+</body>
+</html>
