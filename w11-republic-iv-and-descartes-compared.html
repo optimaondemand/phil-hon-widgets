@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Philosophy Honors &mdash; Lesson 11c</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">PHILOSOPHY HONORS</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 3</div>
+        <div style="font-size: 12px; color: #666;">The Soul and the Self</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 11c</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Republic IV and Descartes, Compared</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">The Soul and the Self</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 11c</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Republic IV and Descartes, Compared: Three Pictures of the Soul</div>
+        <div style="font-size: 16px; color: #666;">Lesson</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">A soul that wants to escape the body, a soul stitched together from two substances, and a soul at war with itself. Which one are you?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">In the <em>Phaedo</em>, Plato's Socrates presented the soul as simple and unified, aspiring to leave the body behind entirely. In <em>Republic</em> IV, Plato changes the picture: the soul is <strong>tripartite</strong>, divided into three parts that can genuinely conflict, and its goal is not escape but internal justice. This closing lesson of Module 3 introduces that third picture, then draws all three pictures, Phaedo, Descartes, and Republic IV, together.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> name and explain the three parts of the soul in <em>Republic</em> IV.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> state Plato's definition of justice in the soul and why reason is supposed to govern.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> compare the <em>Phaedo</em>, Descartes, and <em>Republic</em> IV pictures of the soul on what each includes and what each struggles to explain.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Plato, <em>Republic</em> IV, assigned excerpts: &ldquo;Internal Conflict and Three Parts&rdquo; and &ldquo;Justice as Each Part Doing Its Work&rdquo;</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THE TRIPARTITE SOUL</div>
+
+        <div class="optima-widget ow-reflect">
+          <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
+          <div class="widget-question">Have you ever wanted two contradictory things at the same time, say, to eat the whole dessert and to stick to your diet? (No wrong answer.)</div>
+          <div class="widget-options">
+            <button data-response="That everyday conflict is exactly Plato's starting evidence. Watch how he turns it into an argument about the soul's structure.">&#128123; Yes, constantly</button>
+            <button data-response="Even a single clear case is enough for Plato's argument to get going. See if you recognize the shape of it once you read Leontius's story.">&#129504; Not that I can think of right now</button>
+          </div>
+          <div class="widget-feedback"></div>
+          <button class="widget-reset">Reset</button>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Plato's argument begins from internal conflict: you are thirsty but the water is dirty; part of you wants to drink, part refuses. A thing cannot simultaneously want and not want the same thing in the same respect at the same time (the Principle of Non-Contradiction). Therefore the soul must have distinct parts that can conflict. Plato identifies three: the <strong>appetitive</strong> part (<em>epithumia</em>), the seat of bodily desire, hunger, thirst, comfort, which simply wants without reasoning about whether its objects are good; the <strong>spirited</strong> part (<em>thumos</em>), the seat of anger, ambition, and honor, illustrated by Leontius, who is angry at his own desire to look at executed bodies, an indignation that sides with reason against appetite; and the <strong>rational</strong> part (<em>logistikon</em>), which alone can ask what is genuinely good for the whole person, not just what is pleasant or honorable right now.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; JUSTICE AS EACH PART DOING ITS WORK</div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;"><strong>Justice in the soul is each part doing its own work</strong>: reason governs, spirit assists and enforces reason's commands, and appetite is satisfied within appropriate limits, not suppressed, but not ruling either. Plato's image is the charioteer and two horses (<em>Phaedrus</em> 246a): reason drives, spirit is the horse that responds to command, appetite the horse that must be mastered, and the charioteer's job is not to destroy the horses but to drive them together toward a worthy destination. "Injustice&hellip; is a kind of civil war of these three&hellip; Justice is the opposite, the condition in which each part of the soul performs its own function." <em>(Republic IV, 444b)</em> The unjust soul, whether ruled by appetite, by honor-seeking spirit, or by a reason bent toward cunning rather than wisdom, is internally fractured and at war with itself, regardless of what anyone else thinks of it. This finally answers the question Glaucon posed back in Book II: justice is worth having for its own sake, because it just is the soul's health.</p>
+
+        <div class="optima-widget ow-select">
+          <div class="widget-kicker">&#9889; TRY IT &middot; WHICH PART?</div>
+          <div class="widget-question">Identify the part of the soul at work in each description.</div>
+
+          <div class="widget-row" data-correct="2" data-fb="Right. Only the rational part can step back from immediate desire and honor-seeking to ask what is actually good for the whole person over a life." data-hint="Ask which part is capable of deliberating about the whole person's long-term good, not just an immediate want.">
+            <div class="widget-row-prompt">1. Deciding to skip a party the night before an exam because, weighing everything, it is genuinely the better choice</div>
+            <div class="widget-options">
+              <button data-choice="0">Appetite (epithumia)</button>
+              <button data-choice="1">Spirit (thumos)</button>
+              <button data-choice="2">Reason (logistikon)</button>
+            </div>
+          </div>
+
+          <div class="widget-row" data-correct="1" data-fb="Right. Righteous anger and indignation at injustice, even one's own, is exactly what Plato means by thumos." data-hint="Ask which part is the seat of anger, pride, and indignation rather than of bodily craving or calm deliberation.">
+            <div class="widget-row-prompt">2. Feeling a hot flash of anger at a friend's betrayal, even before you've thought it through</div>
+            <div class="widget-options">
+              <button data-choice="0">Appetite (epithumia)</button>
+              <button data-choice="1">Spirit (thumos)</button>
+              <button data-choice="2">Reason (logistikon)</button>
+            </div>
+          </div>
+
+          <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; THREE PICTURES OF THE SOUL</div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">You have now spent three weeks on a single question: what kind of thing are you? The <strong><em>Phaedo</em></strong> soul is essentially an intellect: simple, akin to the eternal Forms, aiming to escape the body entirely. It struggles to explain appetite and emotion as anything but bodily interference. <strong>Descartes's</strong> soul is a thinking substance arrived at through the <em>cogito</em>, sharply distinct from a mechanical body; it struggles with the interaction problem and the hard problem of consciousness. The <strong><em>Republic</em> IV</strong> soul is tripartite, not trying to escape the body but to govern itself well within it; it explains inner conflict far better than the <em>Phaedo</em> does, but leaves open how its appetitive and spirited parts relate to the simple, immortal soul of the <em>Phaedo</em>. Plato does not resolve this tension cleanly across his own dialogues.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Despite their differences, all three agree that <strong>reason is supposed to govern</strong>: the philosophical soul freeing itself from bodily distortion, the Cartesian will guided by clear and distinct perception, the rational part of the tripartite soul setting appropriate ends for spirit and appetite. In each picture, failing to let reason govern is the source of the soul's disorder, not just a moral failure but a failure of the self to be what it is supposed to be. When Socrates said the unexamined life is not worth living, back in Module 1, he meant exactly this: living without reason's governance is a diminished way to be human.</p>
+
+        <div style="background: #EEF1F8; border-radius: 8px; padding: 18px 22px; margin: 16px 0; overflow-x: auto;">
+            <table style="width: 100%; border-collapse: collapse; min-width: 520px;">
+                <thead><tr style="background: #0E1C42;"><th style="padding: 8px 10px; font-size: 13px; color: #fff; text-align: left; border: 1px solid #334;">Picture</th><th style="padding: 8px 10px; font-size: 13px; color: #fff; text-align: left; border: 1px solid #334;">Account of the soul</th><th style="padding: 8px 10px; font-size: 13px; color: #fff; text-align: left; border: 1px solid #334;">Key open problem</th></tr></thead>
+                <tbody>
+                <tr style="background: #FFFFFF;"><td style="padding: 8px 10px; font-size: 14px; color: #0e1c42; border: 1px solid #D0D9E8;">Plato's <em>Phaedo</em></td><td style="padding: 8px 10px; font-size: 14px; color: #1a2340; border: 1px solid #D0D9E8;">Immaterial, simple, akin to the Forms, escapes the body</td><td style="padding: 8px 10px; font-size: 14px; color: #1a2340; border: 1px solid #D0D9E8;">How does it explain appetite and emotion?</td></tr>
+                <tr style="background: #F4F6FA;"><td style="padding: 8px 10px; font-size: 14px; color: #0e1c42; border: 1px solid #D0D9E8;">Descartes' <em>Meditation VI</em></td><td style="padding: 8px 10px; font-size: 14px; color: #1a2340; border: 1px solid #D0D9E8;">Thinking substance, distinct from extended body</td><td style="padding: 8px 10px; font-size: 14px; color: #1a2340; border: 1px solid #D0D9E8;">The interaction problem; the hard problem</td></tr>
+                <tr style="background: #FFFFFF;"><td style="padding: 8px 10px; font-size: 14px; color: #0e1c42; border: 1px solid #D0D9E8;">Plato's <em>Republic</em> IV</td><td style="padding: 8px 10px; font-size: 14px; color: #1a2340; border: 1px solid #D0D9E8;">Tripartite: reason, spirit, appetite</td><td style="padding: 8px 10px; font-size: 14px; color: #1a2340; border: 1px solid #D0D9E8;">How does it relate to the immortal soul of the Phaedo?</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Recall Module 2's arguments for God. If God exists, the soul's aspiration toward the divine, the good, and the rational is a response to something real in the structure of the universe, not merely a human tendency. If God does not exist, the question of the soul becomes more urgent, not less: whether there is anything in you not reducible to matter and mechanism, and what follows for how you should live. You cannot answer this by reading a textbook. You can only answer it, tentatively and honestly, by examining your own beliefs against the best arguments available.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Week 11 Reading Quiz</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Covers Lessons 11a, 11b, and 11c. In Canvas.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Module 3 Capstone: Phaedo Argument Analysis</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Due at the end of this week. In Canvas.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; HOLD ONTO THIS</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Three philosophers, three pictures, one shared conviction: whatever you are, reason is supposed to be in charge of it. That conviction, more than any single argument, is what this module leaves you with.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; PHILOSOPHY HONORS &middot; Quarter 2 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 11c &middot; Republic IV and Descartes, Compared</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
